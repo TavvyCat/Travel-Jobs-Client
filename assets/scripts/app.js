@@ -1,11 +1,16 @@
 'use strict'
 
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
-
-// use require without a reference to ensure a file is bundled
-// require('./example')
+const { toSignUp, toSignIn, toSignOut, toHome, toAccount } = require('./nav')
 
 $(() => {
-  // your JS code goes here
+  $('.auth-only').hide()
+  $('.employer-only').hide()
+
+  // Navigate to views
+  $('#home').on('click', toHome)
+  $('.navbar-brand').on('click', toHome)
+  $('#sign-up').on('click', toSignUp)
+  $('#sign-in').on('click', toSignIn)
+  $('#sign-out').on('click', toSignOut)
+  $('#account').on('click', toAccount)
 })
