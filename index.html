@@ -33,26 +33,27 @@
                   Jobs
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <button class="dropdown-item" data-type="PT" href="">PT Jobs</button>
-                  <button class="dropdown-item" data-type="PTA" href="">PTA Jobs</button>
-                  <button class="dropdown-item" data-type="OT" href="">OT Jobs</button>
-                  <button class="dropdown-item" data-type="COTA" href="">COTA Jobs</button>
-                  <button class="dropdown-item" data-type="SLP" href="">SLP Jobs</button>
+                  <button id="all-jobs" class="dropdown-item jobs" data-occupation="">All Jobs</button>
+                  <button id="pt-jobs" class="dropdown-item jobs" data-occupation="PT">PT Jobs</button>
+                  <button id="pta-jobs" class="dropdown-item jobs" data-occupation="PTA">PTA Jobs</button>
+                  <button id="ot-jobs" class="dropdown-item jobs" data-occupation="OT">OT Jobs</button>
+                  <button id="cota-jobs" class="dropdown-item jobs" data-occupation="COTA">COTA Jobs</button>
+                  <button id="slp-jobs" class="dropdown-item jobs" data-occupation="SLP">SLP Jobs</button>
                 </div>
               </li>
               <li class="nav-item employer-only">
-                <a class="nav-link" href="#">Post A Job</a>
+                <a id="new-job" class="nav-link" href="#">Post A Job</a>
               </li>
-              <li class="nav-item not-auth">
+              <li class="nav-item not-auth justify-self-end">
                 <a id="sign-in" class="nav-link" href="#">Login</a>
               </li>
-              <li class="nav-item not-auth">
+              <li class="nav-item not-auth justify-self-end">
                 <a id="sign-up" class="nav-link" href="#">Register</a>
               </li>
-              <li class="nav-item auth-only">
+              <li class="nav-item auth-only justify-self-end">
                 <a id="account" class="nav-link" href="#">Account</a>
               </li>
-              <li class="nav-item auth-only">
+              <li class="nav-item auth-only justify-self-end">
                 <a id="sign-out" class="nav-link" href="#">Logout</a>
               </li>
             </ul>
