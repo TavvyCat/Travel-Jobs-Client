@@ -6,7 +6,7 @@ const toHome = e => {
     e.preventDefault()
     // From https://jsfiddle.net/jWcLz/1/
     $('#main-content').fadeOut(500, function() {
-        $(this).html(`<h1>Home Page</h1>`).fadeIn(500);
+        $(this).html(`<h1>Home</h1>`).fadeIn(500);
     });
 }
 
