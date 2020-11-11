@@ -3881,7 +3881,7 @@ module.exports = Math.scale || function scale(x, inLow, inHigh, outLow, outHigh)
 
 var apiUrl = void 0;
 var apiUrls = {
-  production: 'https://travel-jobs-api.herokuapp.com/',
+  production: 'https://travel-jobs-api.herokuapp.com',
   development: 'http://localhost:4741'
 };
 
