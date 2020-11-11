@@ -8,7 +8,7 @@ front-end frameworks included.
 
 ## Installation
 
-1. [Download](../../archive/master.zip) this template.
+1. [Download](../../archive/main.zip) this template.
     - **Do Not Fork And Clone**
     - Click the "Clone or Download" button and select "Download Zip".
 1. Move to the `sei/projects` directory, then unzip the template directory with
@@ -114,7 +114,7 @@ Developers should run these often!
 - `grunt <server|serve|s>`: generates bundles, watches, and livereloads
 - `grunt build`: place bundled styles and scripts where `index.html` can find
     them
-- `grunt deploy`: builds and deploys master branch
+- `grunt deploy`: builds and deploys main branch
 
 
 ## Additional Resources
