@@ -6,11 +6,11 @@ My wife is a traveling physical therapist, and we had this idea for a website/ap
 
 ### Wireframes
 
-![HomePage Wireframe](https://imgur.com/a/FtB2jiu)
+![HomePage Wireframe](https://user-images.githubusercontent.com/56958408/99129825-42dce780-25d4-11eb-92b9-73e65541f6c5.png)
 
-![Jobs Page Wireframe](https://imgur.com/a/cADLMRg)
+![Jobs Page Wireframe](https://user-images.githubusercontent.com/56958408/99129870-6869f100-25d4-11eb-827b-8dada4893007.png)
 
-![New Job Wireframe](https://imgur.com/a/yQZLRw9)
+![New Job Wireframe](https://user-images.githubusercontent.com/56958408/99129877-6b64e180-25d4-11eb-94f6-bc2c5ab967cf.png)
 
 ### User Stories
 * As an user, I want to create my own account.
