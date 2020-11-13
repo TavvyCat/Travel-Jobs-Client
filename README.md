@@ -1,129 +1,40 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+# Travel Rehab Jobs
+This is an app that connects traveling rehab specialists looking for contracts to facilities and companies offering contracts. When someone signs in they can choose employer or employee, and employees choose which occupation they are. The Employers can post new jobs that anyone can see. And the employees see those jobs (next version will have ability to apply).
 
-# browser-template
+### Planning
+My wife is a traveling physical therapist, and we had this idea for a website/app that would remove the need for a recruiter or recruiting company. This project is the bare bones of that idea. I knew there needed to be different types of users. On the front end, the two types of users have different options, but both types use the same schema on the back end. As a website, I wanted there to be a constant header and footer that didn't change, and have the main body change with every click. The "navbar" triggers different HTML to fill the #main-content div. This makes this SPA feel like a multiple page application.
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+### Wireframes
 
-## Installation
+![HomePage Wireframe](https://imgur.com/a/FtB2jiu)
 
-1. [Download](../../archive/main.zip) this template.
-    - **Do Not Fork And Clone**
-    - Click the "Clone or Download" button and select "Download Zip".
-1. Move to the `sei/projects` directory, then unzip the template directory with
-    `unzip /Users/<user-name>/Downloads/travel-jobs-client.zip`.
-1. Rename the template directory from `travel-jobs-client` to
-    `<project-name>-client`.
-1. Empty [`README.md`](README.md) and fill with your own content.
-1. Replace all instances of `ga-wdi-boston.browser-template` with the name of
-    your project.
-    - You can search for all instances of text in Atom by pressing
-    `commant + shift + f` on Mac or `ctrl + shift + f` on WSL.
-1. Move into the new project and `git init`.
-1. Add all of the files in your project with the command `git add --all`.
-      - **Note: This is the only time you should run this command!**
-1. Commit all of your files with the command `git commit`.
-      - Your commit title should read `Initial commit`.
-1. Install dependencies with `npm install`.
-1. Create a new repository on [github.com](https://github.com),
-    _not GitHub Enterprise_.
-1. Name the new repository with the same name used on Step 3.
-1. Follow the instructions on your new repository's setup page. For details on
-   how to push to Github, refer to the section on Github entitled "…or push an existing
-   repository from the command line." Further documentation can be found [here](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/).
+![Jobs Page Wireframe](https://imgur.com/a/cADLMRg)
 
-## Structure
+![New Job Wireframe](https://imgur.com/a/yQZLRw9)
 
-### Scripts
+### User Stories
+* As an user, I want to create my own account.
+* As an employer, I want to add a new job.
+* As a employer, I want to edit/delete jobs I have posted.
+* As a user, I want to update my account info and/or password.
+* As a employee, I want to look at jobs relevant to me.
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/app.js`](assets/scripts/app.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
+### Technologies used:
+* HTML
+* CSS 
+* Bootstrap 
+* JavaScript
+* JQuery
 
-### Config
+### Problems
+I didn't have many problems I wasn't able to solve quickly, but one notable problem was how to make a difference between the employer and employee users. I wanted the experience to be different, and only allow employers to post jobs. I accomplished this by checking the user.type, and if it was "employer" then only links with .employer-only would be shown. I also had an issue with connecting event listeners to dynamic HTML. I ended up attaching them to the #main-content div and using the selector parameter in the $().on() method.
 
-Developers should set `apiUrls.production` and `apiUrls.development` in
-[`assets/scripts/config.js`](assets/scripts/config.js).  With
-`apiUrls` set, developers may rely on `apiUrl` as the base for API
-URLs.
+### Future
+There are several additions I would like to make. First, I want a real way for employees to actually apply. Ideally they could send a cover letter and resume file in an email straight from the website to the employer. I need to research sendGrid to accomplish this. Additionally, I want employees to be able to see the jobs they have applied to, and for the employers to see their jobs postings and all the employees that have applied. I may do this on the back end by adding a key to the schema that is an array which has all the ids of employees that have applied. Then I would filter it on the front end.
 
-### Styles
+#### Links
+[Deployed Front End](https://tavvycat.github.io/Travel-Jobs-Client/)
 
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss). Bootstrap version 3 is
-included in this template.
+[Repo for Back End](https://github.com/TavvyCat/Travel-Job-API)
 
-### Forms and Using `getFormFields`
-
-Developers should use [getFormFields](get-form-fields.md) to retrieve form data
-to send to an API.
-
-### Deployment
-
-To deploy a browser-template based SPA, run `grunt deploy`.
-
-## Adding Images
-
-To add images to your project, you must store them in the `public` directory.
-To use the image in HTML or CSS, write the path to the image like this:
-
-```html
-<img src="public/cat.jpg">
-```
-or
-```css
-#my-cool-div {
-  background-image: url('public/cat.jpg')
-}
-```
-
-Note that there's no `./` or `/` in front of `public/filename.jpg`.
-
-## Adding Fonts
-
-To add custom fonts to your app, you can either use a CDN like Google Fonts, or
-you can download the fonts and save them in the `public` directory. If you use
-the former method, follow the directions on the website providing the fonts.
-
-For local fonts, put the files in `public`, and then import and use them in a
-`.scss` file like this:
-
-```scss
-@font-face {
-  font-family: 'Nature Beauty';
-  src: url('public/Nature-Beauty.ttf') format('truetype');
-}
-
-.element-with-custom-font {
-  font-family: 'Nature Beauty';
-}
-```
-
-## Tasks
-
-Developers should run these often!
-
-- `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
-- `grunt make-standard`: reformats all your code in the JavaScript Standard Style
-- `grunt <server|serve|s>`: generates bundles, watches, and livereloads
-- `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
-- `grunt deploy`: builds and deploys main branch
-
-
-## Additional Resources
-
-- [Modern Javascript Explained for Dinosaurs](https://medium.com/@peterxjang/modern-javascript-explained-for-dinosaurs-f695e9747b70)
-- [Making Sense of Front End Build Tools](https://medium.freecodecamp.org/making-sense-of-front-end-build-tools-3a1b3a87043b)
-
-## [License](LICENSE)
-
-1. All content is licensed under a CC­BY­NC­SA 4.0 license.
-1. All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+[Deployed Back End](https://travel-jobs-api.herokuapp.com/)
