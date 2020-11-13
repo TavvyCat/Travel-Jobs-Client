@@ -2,7 +2,7 @@
 
 const { onUpdateAccountForm, onChangePasswordForm, onSignUpForm, onSignInForm, onSignOutForm } = require('./auth/events')
 const { onGetJobs, onNewJobForm, onGetOneJob, onUpdateJobForm, onDeleteJobForm } = require('./jobs/events')
-const { toSignUp, toSignIn, toSignOut, toHome, toAccount, toNewJob, toUpdateAccount, toChangePassword } = require('./nav')
+const { toSignUp, toSignIn, toSignOut, toHome, toAccount, toNewJob, toUpdateAccount, toChangePassword /* , toApplyModal */ } = require('./nav')
 
 $(() => {
   $('#home').trigger('click')
@@ -17,6 +17,7 @@ $(() => {
   $('#sign-out').on('click', toSignOut)
   $('#account').on('click', toAccount)
   $('#new-job').on('click', toNewJob)
+  // $('#main-content').on('click', '.apply', toApplyModal)
 
   // jobs listeners
   $('.jobs').on('click', onGetJobs)

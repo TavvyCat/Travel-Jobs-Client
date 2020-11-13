@@ -7,7 +7,6 @@ const { onPostJobSuccess, onGetJobsSuccess, onGetOneJobSuccess, onUpdateJobSucce
 
 const onNewJobForm = e => {
   e.preventDefault()
-  console.log(e)
   const formData = getFormFields(e.target)
 
   ajaxPostJob(formData)

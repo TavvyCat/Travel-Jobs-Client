@@ -119,6 +119,7 @@ const toAccount = e => {
                 <div id="buttons" class="row justify-content-around ml-5">
                     <button id="update-account" class="btn btn-info">Update Info</button>
                     <button id="change-password" class="btn btn-warning">Change Password</button>
+                    <button id="your-jobs" class="btn btn-secondary">Change Password</button>
                 <div>
             </div>
         </div>
@@ -249,7 +250,6 @@ const toJobs = res => {
     $(this).html('')
     filteredJobs.forEach(job => {
       const daysAgo = getDays(job.createdAt)
-      console.log(store.user.type)
       $(this).append(`
             <div class="card col-sm-6 col-12 text-center job">
                 <div class="card-header">${job.owner.name}</div>
@@ -259,7 +259,7 @@ const toJobs = res => {
                     <p class="card-text">${job.type}</p>
                     <p class="card-text">${job.description}</p>
                     ${store.user.type === 'Employee' ? `
-                        <button class="btn btn-primary apply">Apply Now</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#apply-modal" data-id="${job._id}">Apply Now</button>
                     ` : ''}
                     ${store.user._id === job.owner._id ? `
                     <button class="update btn btn-info" data-job-id=${job._id}>Edit Job</button>
@@ -342,6 +342,20 @@ const toDeleteJob = job => {
         `).fadeIn(250)
   })
 }
+
+// const toApplyModal = e => {
+//   $('.modal-content').html(`
+//     <div class="modal-header">
+//         <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+//         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+//             <span aria-hidden="true">&times;</span>
+//         </button>
+//     </div>
+//     <div class="modal-body">
+
+//     </div>
+//     `)
+// }
 
 module.exports = {
   toHome,
