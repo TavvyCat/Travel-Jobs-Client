@@ -5,6 +5,7 @@ const { onGetJobs, onNewJobForm, onGetOneJob, onUpdateJobForm, onDeleteJobForm }
 const { toSignUp, toSignIn, toSignOut, toHome, toAccount, toNewJob, toUpdateAccount, toChangePassword } = require('./nav')
 
 $(() => {
+  $('#home').trigger('click')
   $('.auth-only').hide()
   $('.employer-only').hide()
 
@@ -16,7 +17,7 @@ $(() => {
   $('#sign-out').on('click', toSignOut)
   $('#account').on('click', toAccount)
   $('#new-job').on('click', toNewJob)
-  
+
   // jobs listeners
   $('.jobs').on('click', onGetJobs)
   $('#main-content').on('click', '.update', onGetOneJob)
@@ -31,7 +32,7 @@ $(() => {
   $('#main-content').on('submit', '#sign-out-form', onSignOutForm)
   $('#account').on('click', '#change-password', toChangePassword)
   $('#main-content').on('submit', '#change-password-form', onChangePasswordForm)
-  
+
   // account listeners
   $('#main-content').on('submit', '#update-account-form', onUpdateAccountForm)
   $('#account').on('click', '#update-account', toUpdateAccount)

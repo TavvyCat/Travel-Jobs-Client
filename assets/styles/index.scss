@@ -3,3 +3,49 @@
 header {
     text-align: center;
 }
+
+.home-content p, h1 {
+    text-align: center;
+    text-indent: 10px;
+}
+
+.job {
+    padding: 0;
+}
+
+// From https://codepen.io/amerz90/pen/qapLOW
+li {
+  list-style-type: none;
+  margin-left: 1vw;
+}
+
+li:first-child {
+  margin:0;
+}
+
+footer {
+  margin-top: 50px;
+  padding-top: 5vh;
+  padding-bottom: 2vh;
+  background-color: #E9ECEF;
+}
+
+.copyright, .impressum {
+  text-align: center;
+}
+
+.logo {
+  height: 8vh;
+}
+
+@media (max-width: 768px) {
+  li {
+    margin-left: 0;
+    margin-bottom: 1vh;
+  }
+  
+  .sozial {
+    margin-bottom: 1vh;
+  }
+}
+// ^^^

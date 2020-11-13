@@ -5,53 +5,54 @@ const { onSignUpSuccess, onSignInSuccess, onChangePasswordSuccess, onError, onUp
 const getFormFields = require('./../../../lib/get-form-fields')
 
 const onSignUpForm = e => {
-    e.preventDefault()
-    const formData = getFormFields(e.target)
-    
-    ajaxSignUp(formData)
-        .then(onSignUpSuccess)
-        .catch(onError)
+  e.preventDefault()
+  const formData = getFormFields(e.target)
+
+  ajaxSignUp(formData)
+    .then(onSignUpSuccess)
+    .catch(onError)
 }
 
 const onSignInForm = e => {
-    e.preventDefault()
-    const formData = getFormFields(e.target)
+  e.preventDefault()
+  const formData = getFormFields(e.target)
 
-    ajaxSignIn(formData)
-        .then(onSignInSuccess)
-        .catch(onError)
+  ajaxSignIn(formData)
+    .then(onSignInSuccess)
+    .catch(onError)
 }
 
 const onUpdateAccountForm = e => {
-    e.preventDefault()
-    const formData = getFormFields(e.target)
+  e.preventDefault()
+  const formData = getFormFields(e.target)
 
-    ajaxUpdateAccount(formData)
-        .then(onUpdateAccountSuccess)
-        .catch(onError)
+  ajaxUpdateAccount(formData)
+    .then(onUpdateAccountSuccess)
+    .catch(onError)
 }
 
 const onChangePasswordForm = e => {
-    e.preventDefault()
+  e.preventDefault()
 
-    const formData = getFormFields(e.target)
+  const formData = getFormFields(e.target)
 
-    ajaxChangePassword(formData)
-        .then(onChangePasswordSuccess)
+  ajaxChangePassword(formData)
+    .then(onChangePasswordSuccess)
+    .catch(onError)
 }
 
 const onSignOutForm = e => {
-    e.preventDefault()
+  e.preventDefault()
 
-    ajaxSignOut()
-        .then(onSignOutSuccess)
-        .catch(onError)
+  ajaxSignOut()
+    .then(onSignOutSuccess)
+    .catch(onError)
 }
 
 module.exports = {
-    onSignUpForm,
-    onSignInForm,
-    onChangePasswordForm,
-    onSignOutForm,
-    onUpdateAccountForm
+  onSignUpForm,
+  onSignInForm,
+  onChangePasswordForm,
+  onSignOutForm,
+  onUpdateAccountForm
 }
